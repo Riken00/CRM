@@ -1,0 +1,4 @@
+If model respone while migrating like : "ValueError: The field admin.LogEntry.user was declared with a lazy reference to 'leads.user', but app 'leads' doesn't provide model 'user'."
+clear the migrations data and retry again
+
+
