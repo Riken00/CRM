@@ -10,3 +10,4 @@ urlpatterns = [
     path('<int:pk>/delete/',delete_forms,name='delete-forms'),
 ]
 
+    

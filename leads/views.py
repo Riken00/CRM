@@ -13,7 +13,7 @@ def home_page(request):
         "Lead" : Lead,
         "Aatak" : "Khaddela"
     }
-    return render(request,'home.html',a)        
+    return render(request,'leads/home.html',a)        
     # return render(request,'secound.html')
 
 
@@ -26,7 +26,7 @@ def table_data(request,pk):  # here pk will be take the value from the domain li
         "pk" : pk
     }   
     print(sss,'-----------------')                        # i.e  http://127.0.0.1:8000/lead/54   pk will be 54
-    return render(request,'secound.html',contex)
+    return render(request,'leads/secound.html',contex)
     # return HttpResponse(f'This is the table {pk}')
     
 
@@ -48,7 +48,7 @@ def table_create(request):
         "Lead" : form,
         "req" : req
     }
-    return render(request,'forms.html',contex)
+    return render(request,'leads/forms.html',contex)
 # def table_create(request):
     # print(request.POST)
     # req = request.POST
@@ -100,7 +100,7 @@ def table_update(request,pk):
     # return render(request,'forms.html',contex)
 
 
-    return render(request,'updateforms.html',contex)
+    return render(request,'leads/updateforms.html',contex)
 
 def delete_forms(request,pk):
     Lead = Leads.objects.get(id=pk)
