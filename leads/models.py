@@ -24,7 +24,7 @@ class Agents(models.Model):
     User = models.OneToOneField(User,on_delete=models.CASCADE)
 
     def __str__(self) :
-        return self.User.username
+        return self.User.email
     
 
 
