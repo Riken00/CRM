@@ -1,0 +1,126 @@
+{% extends 'base.html' %} {% block content %}
+
+<style>
+  .dubeji_1{
+    background-color: rgb(255, 212, 148);
+    color: rgb(48, 47, 47);
+  }
+  .dubeji_1:hover{
+    background-color: rgba(197, 163, 111, 0.705) ;
+    border: none;
+  }
+</style>
+
+<!-- <div class="container">
+  <h4><a href="{% url 'leads:home-forms' %}">Go back</a></h4>
+</div>
+<h3><a href="{% url 'leads:home-forms' %}">Go back </a></h3>
+{{Lead.pk}}
+<h3><a href="{% url 'leads:update-forms' Lead.pk  %}">Update Forms</a></h3>
+
+<p>This is the {{Lead}}'s details</p>
+<p>For this agents responsible is {{Lead.agent}}</p>
+
+<h3><a href="{% url 'leads:delete-forms' Lead.pk %}">Delete Forms</a></h3> -->
+
+
+
+
+<div class="container px-5 py-24 mx-auto">
+  <div style="left: 500
+  px
+   !important;
+      justify-content: right;
+      text-align: end;
+      margin-right: 120PX;">
+  <h4 class=""><a href="{% url 'leads:home-forms' %}" style="text-decoration: none !important;">Go back to Lead List</a></h4>
+    
+  </div>
+  <div class="lg:w-4/5 mx-auto flex flex-wrap">
+    <img alt="ecommerce" class=" lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded rounded-circle" 
+      src="https://dummyimage.com/400x400" />
+    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+
+      <h1 class="text-gray-900 text-3xl title-font font-medium mb-2 inline" style="color: white ! important;">
+        {{Lead}}
+      </h1> 
+      
+      <p class="leading-relaxed">
+        id : {{Lead.id}}
+      </p>
+      <p class="leading-relaxed">
+        first_name : {{Lead.first_name}}
+      </p>
+      <p class="leading-relaxed">
+        last_name : {{Lead.last_name}}
+      </p>
+      <p class="leading-relaxed">
+        Age : {{Lead.age}}
+      </p>
+      <p class="leading-relaxed">
+        agent_id : {{Lead.agent_id}}
+      </p>
+      <div class="flex mb-4">
+        
+         <span
+          class="flex    border-gray-200 space-x-2s"><a class="text-gray-500"><svg
+              fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg></a><a class="text-gray-500"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg></a><a class="text-gray-500"><svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+              <path
+                d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+              </path>
+            </svg></a></span>
+      </div>
+      <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+        
+        
+      </div>
+      <div class="flex">
+        <a href="{% url 'leads:update-forms' Lead.pk  %}"></a>
+        
+        <button onclick="location.href=' {% url 'leads:update-forms' Lead.pk  %} ' " type="button" class="flex
+           
+            
+        bg-indigo-500
+       
+        py-2
+        px-6
+        focus:outline-none
+        hover:bg-indigo-600
+        rounded
+        dubeji_1">Update Lead</button>
+        <button class="
+            flex
+            ml-auto
+            #B45309
+           
+            py-2
+            px-6
+            focus:outline-none
+            hover:bg-indigo-600
+            rounded
+            dubeji_1
+          "
+          
+          
+          onclick="location.href=' {% url 'leads:delete-forms' Lead.pk  %} ' "
+          >
+          
+          Delete Lead
+        
+        
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %} {% comment %} /lead/{{pk}}/delete {% endcomment %}

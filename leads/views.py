@@ -5,6 +5,9 @@ from .models  import Leads,Agents,User
 from .forms import  from_table_model
 # Create your views here.
 
+def landing_page(request):
+    return render(request,'home.html')
+
 def home_page(request):
     Lead=Leads.objects.all()
     print(Lead)
@@ -26,7 +29,7 @@ def table_data(request,pk):  # here pk will be take the value from the domain li
         "pk" : pk
     }   
     print(sss,'-----------------')                        # i.e  http://127.0.0.1:8000/lead/54   pk will be 54
-    return render(request,'leads/secound.html',contex)
+    return render(request,'leads/detail_lead.html',contex)
     # return HttpResponse(f'This is the table {pk}')
     
 
@@ -48,7 +51,7 @@ def table_create(request):
         "Lead" : form,
         "req" : req
     }
-    return render(request,'leads/forms.html',contex)
+    return render(request,'leads/createlead.html',contex)
 # def table_create(request):
     # print(request.POST)
     # req = request.POST
