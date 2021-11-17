@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'djcrm.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'CRM',
+        'NAME': 'CRM2',
         'USER' : 'postgres',
         'PASSWORD' : '0000',
         'HOST' : 'localhost',
@@ -133,3 +133,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'leads.User'      # this will require to use auto auth models
 
+# -----------------------------------------------------------------
+# static files 
+
+STATIC_URL = "/static/"  # default URL for statis
+STATIC_URL_DIRS = [BASE_DIR/ ""]
+# -----------------------------------------------------------------

@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    
+    #id_agent,label, input{
+   text-align: left;
+   width: 100px;
+   white-space: nowrap;
+   margin: 0px 5px;
+   }
+   #id_agent,input{
+       text-align: center;
+       width: 30%;
+       color: black;
+   } 
+</style>
+       
+   <h5 class="mt-1 mx-2  text-decoration-none "  ><a href="{% url 'leads:home-forms' %}" class="text-decoration-none" >Go back to List</a></h5>
+
+   
+       <div class="container mt-4  border border-dark">
+       <br>
+
+       <form  method="post">
+       {% csrf_token %}
+       {{form.as_p}}
+
+       <hr>
+       <hr>
+       <h4 class="text-center">Are you sure wants to Delete this lead ? </h4>
+       
+       </form>
+       <br>
+       <div class="text-center">
+        <button type="submit" class="border border-light mt-2 py-1 px-3 border border-white ">Delete</button>
+    </div>
+    <hr>
+    <hr>
+       <br><br>
+      {{req}}
+
+       <details>
+       <summary>About us</summary>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias asperiores nisi labore id itaque quod ipsam sapiente vel ipsum saepe!</p>
+   </details> </div> 
+      
+
+{% endblock content %} 

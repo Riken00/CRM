@@ -1,0 +1,1 @@
+user can add, but there is A condition that user must have been owner at least one time in server and also his bot must been already added in server then after that user can add through the python scripts and i did try a lot but i couldn't find any other ways to do that 

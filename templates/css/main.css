@@ -1,0 +1,47 @@
+.en_btn{
+    width: 72px !important;
+  }
+  .en_btn2{
+    margin: 0px 7px !important;
+  }
+  .nav_rk{
+text-decoration: none ;
+    color: rgb(255, 212, 148) !important;
+  }
+  .nav_rk:hover{
+    color: rgba(197, 163, 111, 0.705)  !important ;
+  }
+  #id_agent,label, input{
+    text-align: left;
+    width: 100px;
+    white-space: nowrap;
+    margin: 0px 5px;
+    }
+    #id_agent,input{
+        text-align: center;
+        width: 30%;
+        color: black;
+    }
+    .lead_main {
+        display: inline-flex !important;
+      }
+      .Create_ld{
+        left: 840px !important;
+        display: inline;
+      }
+      .ancher{
+        text-decoration: none ;
+        background: none !important ;
+        color: rgb(255, 212, 148) !important;
+      }
+      .ancher:hover{
+        color: rgba(197, 163, 111, 0.705)  !important ;
+    }
+    .dubeji_1{
+        background-color: rgb(255, 212, 148);
+        color: rgb(48, 47, 47);
+      }
+      .dubeji_1:hover{
+        background-color: rgba(197, 163, 111, 0.705) ;
+        border: none;
+      }
